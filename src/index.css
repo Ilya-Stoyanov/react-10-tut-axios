@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-size: 16px;
+  }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #efefef;
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* blog style */
+.App {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #333;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.header,
+.footer {
+    width: 100%;
+    background-color: #66d8f5;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 10px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.totoal-items {
+    font-weight: 600;
+}
+
+
+.header h1 {
+    font-size: 24px;
+}
+
+.nav {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nav ul {
+    color: #fff;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nav li {
+    padding: 22px;
+    transition: .2s linear;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav li:hover, .nav li:focus, 
+.nav li:hover a, 
+.nav li:focus a {
+    background-color: #eee;
+    color: #333;
+}
+
+/* search form */
+
+.searchForm {
+    width: 80%;
+    padding: 16px 0 0 10px;
+}
+
+.searchForm input[type="text"] {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-height: 48px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* main posts */
+.home, 
+.newPost, 
+.postPage, 
+.about, 
+.missing {
+    width: 100%;
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.missing h2,
+.postPage h2, 
+.missing p, 
+.postPage p {
+    margin-bottom: 20px;
+}
+
+.post {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.post:first-child {
+    margin-top: 0;
+}
+
+.postDate {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.postBody {
+    margin: 20px 0;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.postPage p{
+    line-height: 30px;
+    font-size: 25px;
+}
+
+.postPage button {
+    height: 48px;
+    min-width: 48px;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* new Post */
+.newPost h2{
+    font-size: 24px;
+}
+
+.newPostForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.newPostForm label {
+    margin: 20px 0 10px;
+}
+
+.newPostForm input[type='text'], 
+.newPostForm textarea {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+    outline: none;
+}
+
+.newPostForm textarea {
+    height: 100px;
+}
+
+.newPostForm button {
+    margin-top: 18px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.newPostForm button:hover{
+    background: #66d8f5;
+}
+
+.newPostForm button:focus{
+    transform: scale(0.98);
+}
+
+@media(min-width: 610px) {
+    .header h1 {
+        font-size: 44px;
+    }
+    .nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .searchForm {
+        width: 50%;
+        padding: 6px 0;
+    }
+
+    .searchForm input[type="text"] {
+        margin-left: 8px;
+    }
+
+    .nav ul {
+        text-align: right;
+    }
+
+    .newPostForm textarea {
+        height: 300px;
+    }
+}
